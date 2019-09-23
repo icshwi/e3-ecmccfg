@@ -1,0 +1,20 @@
+#
+VARS_EXCLUDES := $(.VARIABLES)
+
+ifneq (,$(findstring dev,$(MAKECMDGOALS)))
+include $(TOP)/configure/RELEASE_DEV
+else
+include $(TOP)/configure/RELEASE
+endif
+
+ifneq (,$(findstring dev,$(MAKECMDGOALS)))
+include $(TOP)/configure/CONFIG_MODULE_DEV
+else
+include $(TOP)/configure/CONFIG_MODULE
+endif
+
+E3_REQUIRE_LOCATION := $(EPICS_BASE)/$(E3_REQUIRE_NAME)/$(E3_REQUIRE_VERSION)
+REQUIRE_CONFIG := $(E3_REQUIRE_LOCATION)/configure
+
+include $(REQUIRE_CONFIG)/CONFIG
+

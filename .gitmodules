@@ -1,4 +1,4 @@
 [submodule "ecmccfg"]
 	path = ecmccfg
 	url = https://github.com/icshwi/ecmccfg.git
-	ignore = all
+	ignore = dirty

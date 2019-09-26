@@ -84,17 +84,23 @@ SUBS += $(foreach path, $(ECMC_HW_TYPES), $(wildcard $(APPDB)/$(path)/*.substitu
 
 
 
+# 
+# include $(E3_REQUIRE_CONFIG)/RULES_INFLATING_DB
 
 db: $(SUBS) 
 
 $(SUBS):
-	@printf "Inflating database ... %44s >>> %40s \n" "$@" "$(basename $(@)).db"
-	@rm -f  $(basename $(@)).db.d  $(basename $(@)).db
-	@$(MSI) -D $(USR_DBFLAGS) -o $(basename $(@)).db -S $@  > $(basename $(@)).db.d
-	@$(MSI)    $(USR_DBFLAGS) -o $(basename $(@)).db -S $@
+       @printf "Inflating database ... %44s >>> %40s \n" "$@" "$(basename $(@)).db"
+       @rm -f  $(basename $(@)).db.d  $(basename $(@)).db
+       @$(MSI) -D $(USR_DBFLAGS) -o $(basename $(@)).db -S $@  > $(basename $(@)).db.d
+       @$(MSI)    $(USR_DBFLAGS) -o $(basename $(@)).db -S $@
 
 
 .PHONY: db $(SUBS)
+
+#
+# include $(E3_REQUIRE_CONFIG)/RULES_INFLATING_DB
+
 
 vlibs:
 

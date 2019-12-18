@@ -1,9 +1,9 @@
 #
 EPICS_MODULE_NAME:=ecmccfg
 
-EPICS_MODULE_TAG:=master
+EPICS_MODULE_TAG:=39a8c4b
 #
-E3_MODULE_VERSION:=master
+E3_MODULE_VERSION:=0.9.0
 #
 #
 # In most case, we don't need to touch the following variables.

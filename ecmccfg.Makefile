@@ -60,6 +60,7 @@ ECMC_HW_TYPES += Beckhoff_9XXX
 ECMC_HW_TYPES += Kuhnke
 ECMC_HW_TYPES += MicroEpsilon
 ECMC_HW_TYPES += Technosoft
+ECMC_HW_TYPES += Beckhoff_KL
 
 # We copy all db, template, and substitutions files into the installation path
 # After tune the startup scripts, can we remove substitutions files?

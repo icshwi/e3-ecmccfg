@@ -3,7 +3,7 @@ EPICS_MODULE_NAME:=ecmccfg
 #
 EPICS_MODULE_TAG:=6.2.0
 #
-E3_MODULE_VERSION:=v6.2.0
+E3_MODULE_VERSION:=6.2.0
 #
 #
 # In most case, we don't need to touch the following variables.

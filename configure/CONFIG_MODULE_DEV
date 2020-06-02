@@ -1,8 +1,8 @@
 #
 EPICS_MODULE_NAME:=ecmccfg
-EPICS_MODULE_TAG:=master
+EPICS_MODULE_TAG:=Toni_chopper
 #
-E3_MODULE_VERSION:=master
+E3_MODULE_VERSION:=Toni_chopper
 
 # DEPENDENT MODULE VERSION
 # For Example, 
